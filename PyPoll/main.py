@@ -55,7 +55,7 @@ with open (csvpath,newline='') as csvfile:
 
 
 
-print(f'Election Results')
+print(f'Election Results') 
 print(f'------------------------------------------------')
 print(f'votes: ({voteCount})')
 print(f'------------------------------------------------')
@@ -66,3 +66,17 @@ print(f"""O'tooley: {toolPercent} ({toolCount})""")
 print(f'------------------------------------------------')
 print(f'Winner : {winnerName}')
 print(f'------------------------------------------------')
+
+x = open('voteresults.txt','w')
+x.write(f'Election Results\n')
+x.write(f'------------------------------------------------\n')
+x.write(f'votes: ({voteCount})\n')
+x.write(f'------------------------------------------------\n')
+x.write(f'Khan: {khanPercent} ({khanCount})\n')
+x.write(f'Correy: {correyPercent} ({correyCount})\n')
+x.write(f'Li: {liPercent} ({liCount})\n')
+x.write(f"""O'tooley: {toolPercent} ({toolCount})\n""")
+x.write(f'------------------------------------------------\n')
+x.write(f'Winner : {winnerName}\n')
+x.write(f'------------------------------------------------\n')
+x.close()
