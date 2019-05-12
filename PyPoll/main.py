@@ -12,7 +12,9 @@ liPercent = 0
 toolPercent = 0
 
 def percentCalc(votes):
-    return votes / voteCount
+    percentV = votes / voteCount
+    return str(round(float(percentV*100),2))+'%'
+
 
 
 
@@ -38,14 +40,29 @@ with open (csvpath,newline='') as csvfile:
        correyPercent = percentCalc(correyCount)
        liPercent = percentCalc(liCount)
        toolPercent = percentCalc(toolCount)
+       voteTotals=[khanCount,correyCount,liCount,toolCount]
+       winner = max(voteTotals)
+       if winner == khanCount:
+           winnerName = "Khan"
+       elif winner == correyCount:
+           winnerName = "Correy"
+       elif winner == liCount:
+           winnerName = "li"
+       elif winner == toolCount:
+           winnerName = "Tooley"
+    
        
 
 
 
-
+print(f'Election Results')
+print(f'------------------------------------------------')
 print(f'votes: ({voteCount})')
+print(f'------------------------------------------------')
 print(f'Khan: {khanPercent} ({khanCount})')
 print(f'Correy: {correyPercent} ({correyCount})')
 print(f'Li: {liPercent} ({liCount})')
 print(f"""O'tooley: {toolPercent} ({toolCount})""")
-   
+print(f'------------------------------------------------')
+print(f'Winner : {winnerName}')
+print(f'------------------------------------------------')
