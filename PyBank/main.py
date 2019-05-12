@@ -36,7 +36,7 @@ print(f'___________________________')
 print(f'Total Months: {totalMonth}')
 print(f'net total: ${totalNet}')
 print(f'average: ${average}')
-print(f'Greatest Increase in Profits: ${maxNum}')
+print(f'Greatest Increase in Profits: {month} ${maxNum}')
 print(f'Greatest Decrease in Profits: ${minNum}')
    
 
