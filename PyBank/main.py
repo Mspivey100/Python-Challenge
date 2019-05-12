@@ -36,8 +36,19 @@ print(f'___________________________')
 print(f'Total Months: {totalMonth}')
 print(f'net total: ${totalNet}')
 print(f'average: ${average}')
-print(f'Greatest Increase in Profits: {month} ${maxNum}')
+print(f'Greatest Increase in Profits: ${maxNum}')
 print(f'Greatest Decrease in Profits: ${minNum}')
+
+x = open('bankresults.txt','w')
+x.write(f'Financial Analysis\n')
+x.write(f'___________________________\n')
+x.write(f'Total Months: {totalMonth}\n')
+x.write(f'net total: ${totalNet}\n')
+x.write(f'average: ${average}\n')
+x.write(f'Greatest Increase in Profits: ${maxNum}\n')
+x.write(f'Greatest Decrease in Profits: ${minNum}\n')
+x.close()
+
    
 
 
