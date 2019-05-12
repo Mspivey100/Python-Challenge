@@ -6,6 +6,7 @@ totalMonth = 0
 totalNet = 0
 average = 0
 maxNum = 0
+minNum = 0
 
 with open (csvpath,newline='') as csvfile:
    
@@ -21,6 +22,8 @@ with open (csvpath,newline='') as csvfile:
        totalNet += float(row[1])
        average = round(totalNet / totalMonth,2)
        maxNum = max(maxNum,float(row[1]))
+       minNum = min(minNum,float(row[1]))
+
        
 
 
@@ -34,6 +37,7 @@ print(f'Total Months: {totalMonth}')
 print(f'net total: ${totalNet}')
 print(f'average: ${average}')
 print(f'Greatest Increase in Profits: ${maxNum}')
+print(f'Greatest Decrease in Profits: ${minNum}')
    
 
 
